@@ -13,5 +13,5 @@
     (is (= false (valid? "Aa_nnnnn"))))
   (testing "Passwords without a lowercase are not valid"
     (is (= false (valid? "AA8_NNNN"))))
-  (testing "Passwords without a uppercase are not valid"
+  (testing "Passwords without an uppercase are not valid"
     (is (= false (valid? "aa8_nnnn")))))
