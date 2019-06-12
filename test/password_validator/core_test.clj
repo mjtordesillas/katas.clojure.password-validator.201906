@@ -8,4 +8,6 @@
   (testing "Passwords with less than 8 characters are not valid"
     (is (= false (valid? "Aa8_nnn"))))
   (testing "Passwords without an underscore are not valid"
-    (is (= false (valid? "Aa8nnnnn")))))
+    (is (= false (valid? "Aa8nnnnn"))))
+  (testing "Passwords without a number are not valid"
+    (is (= false (valid? "Aa_nnnnn")))))

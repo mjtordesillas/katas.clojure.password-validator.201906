@@ -5,4 +5,5 @@
 (defn valid? [password]
   (and
     (>= (count password) 8)
-    (includes? password "_")))
+    (includes? password "_")
+    (some? (re-find #"[0-9]+" password))))
