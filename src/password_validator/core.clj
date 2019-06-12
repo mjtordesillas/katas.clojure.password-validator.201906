@@ -1,5 +1,8 @@
 (ns password-validator.core
-  (:gen-class))
+  (:gen-class)
+  (:require [clojure.string :refer :all]))
 
 (defn valid? [password]
-  (>= (count password) 8))
+  (and
+    (>= (count password) 8)
+    (includes? password "_")))
