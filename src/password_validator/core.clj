@@ -9,4 +9,5 @@
   (and
     (>= (count password) 8)
     (includes? password "_")
-    (contains-number? password)))
+    (contains-number? password)
+    (some? (re-find #"[a-z]+" password))))

@@ -10,4 +10,6 @@
   (testing "Passwords without an underscore are not valid"
     (is (= false (valid? "Aa8nnnnn"))))
   (testing "Passwords without a number are not valid"
-    (is (= false (valid? "Aa_nnnnn")))))
+    (is (= false (valid? "Aa_nnnnn"))))
+  (testing "Passwords without a lowercase are not valid"
+    (is (= false (valid? "AA8_NNNN")))))
