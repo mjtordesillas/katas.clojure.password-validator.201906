@@ -8,9 +8,13 @@
 (defn contains-lowercase? [password]
   (some? (re-find #"[a-z]+" password)))
 
+(defn contains-uppercase? [password]
+  (some? (re-find #"[A-Z]+" password)))
+
 (defn valid? [password]
   (and
     (>= (count password) 8)
     (includes? password "_")
     (contains-number? password)
-    (contains-lowercase? password)))
+    (contains-lowercase? password)
+    (contains-uppercase? password)))
