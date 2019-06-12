@@ -4,4 +4,6 @@
 
 (deftest password-validator
   (testing "Valid password"
-    (is (= true (valid? "Aa8_nnnn")))))
+    (is (= true (valid? "Aa8_nnnn"))))
+  (testing "Passwords with less than 8 characters are not valid"
+    (is (= false (valid? "Aa8_nnn")))))

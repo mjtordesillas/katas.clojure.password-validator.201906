@@ -2,4 +2,4 @@
   (:gen-class))
 
 (defn valid? [password]
-  true)
+  (>= (count password) 8))
